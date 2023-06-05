@@ -1,0 +1,58 @@
+CSC4029Z Assignment 2
+GTTDAN002
+=====================
+
+Usage Instructions:
+==================
+The program was written and tested on Linux.
+
+Ensure that the `libsdl2-dev` and `libglew-dev` packages are installed.
+
+A makefile is provided. Run the command "make" to compile the program, and "make run" to run the program.
+
+When run, a window should appear with a 3D object rendered at the origin. This assignment was about shading, so only models with assigned normals will be displayed effectively. suzanne.obj was used for testing.
+
+The name of the 3D object file is specified on line 281 (this can be edited to load a different model).
+
+The name of the texture file can be specified below this (as an argument supplied to the applyTexture() function).
+
+Camera rotatations and model scaling can be applied by means of key-presses. The possible key-presses are listed below.
+
+X:
+        sets the camera rotation/model scaling axis to the x-axis.     -----> will be printed to the output console
+
+Y:
+        sets the camera rotation/model scaling axis to the y-axis.     -----> will be printed to the output console
+
+Z:
+        sets the camera rotation/model scaling axis to the z-axis.     -----> will be printed to the output console
+
++:
+        scales the model up on the current axis.
+
+-:
+        scales the model down on the current axis.
+
+LEFT ARROW:
+        rotates the camera in the negative direction about the current axis.
+
+RIGHT ARROW:
+        rotates the camera in the positve direction about the current axis.
+
+BACKSPACE:
+        resets the camera to its initial position and undoes all scaling applied to the model.
+
+
+Defaults:
+==================
+Axis:           y-axis
+Light 1:        white (specified on line 261)
+Light 2:        yellow (specified on line 264)
+
+References:
+==================
+The provided C++ framework code is used to load the object and render it to the window.
+Additional code to handle key presses, apply camera rotations, and model scaling was inspired by content and additional code 
+provided in the CSC4029Z lectures. 
+The websites http://www.opengl-tutorial.org/ and https://learnopengl.com were used to provide inspiration for the camera rotations, lighting calculations, and texturing.
+The stb_image.h header file was used for loading the texture.
